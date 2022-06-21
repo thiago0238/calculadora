@@ -8,38 +8,49 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="total" class="wrap">
-        <div id="operadores" class="wrap">
-            <P id="operador-%" class="botao">%</P>
-            <P id="operador-CE" class="botao">CE</P>
-            <P id="operador-C" class="botao">C</P>
-            <P id="operador-1/x" class="botao">1/x</P>
-            <P id="operador-x^2" class="botao">x^2</P>
-            <P id="operador-x^1/2" class="botao">x^1/2</P>
-        </div>
-        <div id="numeros-calculadora" class="wrap">
-            <p id="numero-7" class="botao">7</p>
-            <p id="numero-8" class="botao">8</p>
-            <p id="numero-9" class="botao">9</p>
-            <p id="numero-4" class="botao">4</p>
-            <p id="numero-5" class="botao">5</p>
-            <p id="numero-6" class="botao">6</p>
-            <p id="numero-1" class="botao">1</p>
-            <p id="numero-2" class="botao">2</p>
-            <p id="numero-3" class="botao">3</p>
-            <p id="numero" class="botao"></p>
-            <p id="numero-0" class="botao">0</p>
-            <p id="numero-," class="botao">,</p>
-        </div>
-        <div id="operadores-calculadora" class="wrap">
-            <P id="operador-x" class="botao">x</P>
-            <P id="operador-/" class="botao">/</P>
-            <P id="operador-*" class="botao">*</P>
-            <P id="operador-" class="botao">-</P>
-            <P id="operador-+" class="botao">+</P>
-            <P id="operador-=" class="botao">=</P>
-            
-        </div>
-    </div>
+    <table id="total" class="wrap">
+        <tr>
+             <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+             <td> <input type="button" value="C" onclick="clearScreen()" class="btn" /> </td>
+        </tr>
+        <tr >
+            <td class="botao"><input type="button" value="%" onclick="display('%')"/></td>
+            <td class="botao"><input type="button" value="CE" onclick="clearScreen()"/></td>
+            <td class="botao"><input type="button" value="C" onclick="clearScreen()"/></td>
+            <td class="botao"><input type="button" value="DEL" onclick="clearScreen()" class="btn"/></td>
+           
+        </tr>
+        <tr >
+            <td class="botao"><input type="button" value="1/x" onclick="display('1/x')"/></td>
+            <td class="botao"><input type="button" value="x^2" onclick="display('x^2')"/></td>
+            <td class="botao"><input type="button" value="x^1/2" onclick="display('x^1/2')"/></td>
+            <td class="botao"><input type="button" value="/" onclick="display('/')"/> </td>
+        </tr>
+        <tr>
+            <td class="botao"><input type="button" value="7" onclick="display('7')"/></td>
+            <td class="botao"><input type="button" value="8" onclick="display('8')"/></td>
+            <td class="botao"><input type="button" value="9" onclick="display('9')"/></td>
+            <td class="botao"><input type="button" value="*" onclick="display('*')"/></td>
+        </tr>
+        <tr>
+            <td class="botao"> <input type="button" value="4" onclick="display('4')" /> </td>
+            <td class="botao"> <input type="button" value="5" onclick="display('5')" /> </td>
+            <td class="botao"> <input type="button" value="6" onclick="display('6')" /> </td>
+            <td class="botao"> <input type="button" value="-" onclick="display('-')" /> </td>
+        </tr>
+        <tr>
+            <td class="botao"> <input type="button" value="1" onclick="display('1')" /> </td>
+            <td class="botao"> <input type="button" value="2" onclick="display('2')" /> </td>
+            <td class="botao"> <input type="button" value="3" onclick="display('3')" /> </td>
+            <td class="botao"><input type="button" value="+" onclick="display('+')" /></td>
+        </tr>
+        <tr>
+            <td class="botao"><input type="button" value="+/-" onclick="display('+/-')" /></td>
+            <td class="botao"> <input type="button" value="0" onclick="display('0')" /> </td>
+            <td class="botao"><input type="button" value="," onclick="display(',')" /></td>
+            <td class="botao"> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>>
+        </tr>
+      <script src="script.js"></script>
+    </table>
 </body>
 </html>
